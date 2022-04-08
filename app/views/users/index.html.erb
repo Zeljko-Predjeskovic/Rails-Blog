@@ -1,0 +1,19 @@
+<div class="flex-column">
+
+  <p style="color: green"><%= notice %></p>
+
+  <h1>Users</h1>
+
+  <div id="users">
+    <% @users.each do |user| %>
+
+      <div class="margin-15">
+      <%= user.name %>
+        <%= link_to "detail", user %>
+      </div>
+
+    <% end %>
+  </div>
+
+  <%= link_to "New user", new_user_path %>
+</div>

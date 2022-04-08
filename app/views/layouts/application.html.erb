@@ -10,6 +10,20 @@
   </head>
 
   <body>
-    <%= yield %>
+
+  <nav class="navbar gap-10 bg-color-dark">
+    <div class="navItem">
+      <%= link_to "Profile", root_path, 
+      class: "a-text color-bright" %>
+    </div>
+    <div class="navItem">
+      <%= link_to "Articles", articles_showAll_path, 
+      class: "a-text color-bright" %>
+    </div>
+  </nav>
+
+    <div class="container text-pos-center ">
+      <%= yield %>
+    </div>
   </body>
 </html>

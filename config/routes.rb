@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+  resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  root "articles#index"
+  root "users#index"
 
-  resources :articles do
-    resources :comments
+  get "/articles/showAll", to: "articles#showAll"
+
+  resources :users do
+    resources :articles do
+      resources :comments
+    end
   end
 end

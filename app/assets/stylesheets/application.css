@@ -13,3 +13,370 @@
  *= require_tree .
  *= require_self
  */
+
+:root {
+  --black: rgb(20, 20, 20);
+  --dark: rgb(41, 39, 39);
+  --yellow: rgba(230, 199, 26, 0.815);
+  --image: url("https://c4.wallpaperflare.com/wallpaper/586/603/742/minimalism-4k-for-mac-desktop-wallpaper-preview.jpg");
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.font-fam-serif {
+  font-family: sans-serif;
+}
+
+.font-fam-times {
+  font-family: "Times New Roman";
+}
+
+.font-fam-calibri {
+  font-family: Calibri;
+}
+
+.font-fam-lucida {
+  font-family: "Lucida Sans";
+}
+
+.font-size-12 {
+  font-size: 12pt;
+}
+
+.font-size-16 {
+  font-size: 16pt;
+}
+
+.font-size-18 {
+  font-size: 18pt;
+}
+
+.font-size-24 {
+  font-size: 24pt;
+}
+
+.table {
+  border: 1px;
+  border-style: solid;
+  border-collapse: collapse;
+}
+
+.table th {
+  border: 1px;
+  border-style: solid;
+  background-color: var(--yellow);
+}
+
+.table td {
+  border: 1px;
+  border-style: solid;
+}
+
+.navbar {
+  top: 0;
+  position: sticky;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.sticky-top {
+  left: 0;
+  position: sticky;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.text-pos-center {
+  text-align: center;
+}
+
+.content-left {
+  justify-content: left;
+}
+
+.content-right {
+  justify-content: right;
+}
+
+.content-center {
+  justify-content: center;
+}
+
+.content-space-between {
+  justify-content: space-between;
+}
+
+.navItem {
+  margin: 10px;
+  padding: 10px;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 280px) {
+  .container {
+    max-width: 260px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-1 {
+  -ms-flex: 0 0 11.1111111%;
+  flex: 0 0 11.1111111%;
+  max-width: 11.1111111%;
+}
+
+.col-2 {
+  -ms-flex: 0 0 22.2222222%;
+  flex: 0 0 22.2222222%;
+  max-width: 22.2222222%;
+}
+
+.col-3 {
+  -ms-flex: 0 0 33.3333333%;
+  flex: 0 0 33.3333333%;
+  max-width: 33.3333333%;
+}
+
+.col-4 {
+  -ms-flex: 0 0 44.4444444%;
+  flex: 0 0 44.4444444%;
+  max-width: 44.4444444%;
+}
+
+.col-5 {
+  -ms-flex: 0 0 55.5555555%;
+  flex: 0 0 55.5555555%;
+  max-width: 55.5555555%;
+}
+
+.col-6 {
+  -ms-flex: 0 0 66.6666666%;
+  flex: 0 0 66.6666666%;
+  max-width: 66.6666666%;
+}
+
+.col-7 {
+  -ms-flex: 0 0 77.7777777%;
+  flex: 0 0 77.7777777%;
+  max-width: 77.7777777%;
+}
+
+.col-8 {
+  -ms-flex: 0 0 88.8888888%;
+  flex: 0 0 88.8888888%;
+  max-width: 88.8888888%;
+}
+
+.col-9 {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "left center center center center right"
+    "footer footer footer footer footer footer";
+  margin: 0;
+}
+
+.grid-header {
+  grid-area: header;
+}
+
+.grid-left {
+  grid-area: left;
+}
+
+.grid-center {
+  grid-area: center;
+}
+
+.grid-footer {
+  grid-area: footer;
+}
+
+.grid-right {
+  grid-area: right;
+}
+
+.margin-5 {
+  margin: 5px;
+}
+
+.margin-15 {
+  margin: 15px;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.gap-15 {
+  gap: 15px;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.padding-15 {
+  padding: 15px;
+}
+
+.jumbo {
+  margin-top: 10%;
+  margin-bottom: 5%;
+  padding: 10%;
+}
+
+.curved-borders {
+  border: solid;
+  border-radius: 5px;
+  border-color: transparent;
+}
+
+.solid-borders-black {
+  border: solid;
+  border-width: 2px;
+  border-color: black;
+}
+
+.color-dark {
+  color: var(--dark);
+}
+
+.color-bright {
+  color: white;
+}
+
+.color-yellow {
+  color: var(--yellow);
+}
+
+.bg-color-black {
+  background-color: var(--black);
+}
+
+.bg-color-dark {
+  background-color: var(--dark);
+}
+
+.bg-color-bright {
+  background-color: white;
+}
+
+.bg-color-yellow {
+  background-color: var(--yellow);
+}
+
+.bg-image {
+  background-image: var(--image);
+}
+
+.bg-image-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.p-button {
+  padding: 5px;
+  border: solid;
+  border-radius: 5px;
+  border-color: transparent;
+  text-decoration: none;
+}
+
+.p-button:link {
+  text-decoration: none;
+}
+
+.p-button:active {
+  text-decoration: none;
+}
+
+.p-button:visited {
+  text-decoration: none;
+}
+
+.p-button:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.a-text {
+  text-decoration: none;
+}
+
+.a-text:hover {
+  text-decoration: none;
+}
+
+.a-text:link {
+  text-decoration: none;
+}
+
+.a-text:visited {
+  text-decoration: none;
+}
+
+.a-text:active {
+  text-decoration: none;
+}
