@@ -8,7 +8,6 @@ class UsersController < ApplicationController
 
   # GET /users/1 or /users/1.json
   def show
-    @user = User.find(params[:id])
   end
 
   # GET /users/new
@@ -25,6 +24,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
       if @user.save
+        cookies[:user_id] = @user.id
         redirect_to root_path, notice: "User was successfully created."
       else
         render :new, status: :unprocessable_entity
@@ -44,9 +44,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
 
-    respond_to do |format|
-      format.html { redirect_to users_url, notice: "User was successfully destroyed." }
-    end
+    redirect_to users_url, notice: "User was successfully destroyed."
   end
 
   private
