@@ -15,9 +15,9 @@
  */
 
 :root {
-  --black: rgb(20, 20, 20);
-  --dark: rgb(41, 39, 39);
-  --yellow: rgba(230, 199, 26, 0.815);
+  --black: black;
+  --dark: #233147;
+  --yellow: #17ad58;
   --image: url("https://c4.wallpaperflare.com/wallpaper/586/603/742/minimalism-4k-for-mac-desktop-wallpaper-preview.jpg");
 }
 
@@ -88,6 +88,7 @@ body {
   left: 0;
   position: sticky;
 }
+
 
 .flex-row {
   display: flex;
@@ -266,6 +267,23 @@ body {
   margin: 15px;
 }
 
+.margin-30 {
+  margin: 30px;
+}
+
+
+.margin-expTop-80 {
+  margin-top: -40px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: -50px;
+}
+
+.margin-minus{
+    margin: -15px;
+}
+
+
 .gap-10 {
   gap: 10px;
 }
@@ -283,15 +301,29 @@ body {
 }
 
 .jumbo {
-  margin-top: 10%;
+  margin-top: 1%;
   margin-bottom: 5%;
-  padding: 10%;
+  padding: 5%;
+}
+
+@media (min-width: 992px) {
+  .jumbo {
+        margin-left: 10%;
+        margin-right: 10%;
+  }
 }
 
 .curved-borders {
   border: solid;
   border-radius: 5px;
   border-color: transparent;
+}
+
+.curved-borders-shadows {
+  border: solid;
+  border-radius: 5px;
+  border-color: transparent;
+  box-shadow: 7px 7px rgba(33, 173, 88, 0.7)
 }
 
 .solid-borders-black {
@@ -324,7 +356,7 @@ body {
   background-color: white;
 }
 
-.bg-color-yellow {
+.bg-color-contrast {
   background-color: var(--yellow);
 }
 
