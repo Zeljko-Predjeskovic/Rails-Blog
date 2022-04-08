@@ -36,6 +36,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_08_151103) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_users_on_name", unique: true
   end
 
   add_foreign_key "articles", "users"

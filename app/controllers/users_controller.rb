@@ -25,7 +25,7 @@ class UsersController < ApplicationController
 
       if @user.save
         cookies[:user_id] = @user.id
-        redirect_to root_path, notice: "User was successfully created."
+        redirect_to user_path(@user.id), notice: "User was successfully created."
       else
         render :new, status: :unprocessable_entity
       end
@@ -43,8 +43,9 @@ class UsersController < ApplicationController
   # DELETE /users/1 or /users/1.json
   def destroy
     @user.destroy
+    cookies.delete :user_id
 
-    redirect_to users_url, notice: "User was successfully destroyed."
+    redirect_to articles_showAll_path, notice: "User was successfully destroyed."
   end
 
   private

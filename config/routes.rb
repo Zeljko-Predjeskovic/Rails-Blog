@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get "/articles/showAll", to: "articles#showAll"
 
-  root "articles#showAll"
+  root "homes#home"
  
 
 
@@ -12,6 +12,8 @@ Rails.application.routes.draw do
       resources :comments
     end
   end
+
+  get "/home", to:"homes#home"
 
 
   get "/login", to: "sessions#login"

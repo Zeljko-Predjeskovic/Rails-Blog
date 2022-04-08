@@ -1,0 +1,26 @@
+<div class="main-grid margin-30">
+
+	<div class="grid-header color-bright">
+		<div class="jumbo bg-color-contrast curved-borders-shadows margin-30"><h1 class="margin-minus">Welcome to</h1> <br> <br> <br> <br>
+			<%= link_to "Articles", articles_showAll_path ,
+			class: "a-text color-bright p-button bg-color-dark" %>
+		</div>
+	</div>
+
+	<div class="grid-right margin-15">
+		<h2 class="jumbo">Publish your articles or keep them private!<h2>
+	</div>	
+	<div class="grid-left margin-15">
+		<h2 class="jumbo"><%= link_to "Create an account" , new_user_path, class: "color-dark" %> and write your own stories!</h2>
+	</div>	
+	<div class="grid-footer margin-15">
+		<div>
+			<h2 >No emails and data tracking</h2>
+			<h3>Just people who write what they want</h3>
+	</div>
+	</div>	
+
+</div>
+<footer class="text-pos-center bg-color-bright">
+  <%= link_to "gdpr" %>
+</footer>
