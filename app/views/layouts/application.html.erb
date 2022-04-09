@@ -32,12 +32,16 @@
 <% else %>
   <nav class="navbar gap-10 bg-color-dark">
     <div class="navItem">
-      <%= link_to "Login", login_path, 
+      <%= link_to "Home", home_path, 
       class: "a-text color-bright" %>
-    </div>
+    </div>    
     <div class="navItem">
       <%= link_to "Articles", 
       articles_showAll_path, method: :post, data: { turbo_confirm: 'Are you sure you want to logout?' },
+      class: "a-text color-bright" %>
+    </div>
+    <div class="navItem">
+      <%= link_to "Login", login_path, 
       class: "a-text color-bright" %>
     </div>
   </nav>

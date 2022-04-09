@@ -6,22 +6,19 @@
 	</div>
 
 		<% @articles.each do |article| %>
-		<% if current_user %>
 			<% unless article.archived? %>
 			<div class="margin-lr margin-30 curved-borders-con">
 				<div class="margin-5">
-					<%= link_to article.title, user_article_path(article.user_id, article) %>
+					<h3>
+						<%= link_to article.title, user_article_path(article.user_id, article) %>
+					</h3>
 				</div>
 				<div class="margin-15">
 					<%= article.body[0,60] + "..."%>
 				</div>
 			</div>
 			<% end %>
-		<% else %>
-			<div>
-				<%= article.title %>
-			</div>	
-		<% end %>
+
 		<% end %>
 
 

@@ -1,14 +1,22 @@
 <p style="color: green"><%= notice %></p>
 
-<h1><%= @user.name %></h1>
+    <div class="container">
+        <div class="flex-column content-space-between">
+        <h1><%= @user.name %></h1>
 
 
-<h2>Articles</h2>
-<%= render @user.articles%>
+        <h2>Articles</h2>
+        <%= render @user.articles%>
 
 
+        <div class="margin-15">
+            <%= link_to "edit user", edit_user_path(@user), class: " p-button color-bright bg-color-dark" %>
+        </div>
+        <div class="margin-15">
+            <%= link_to "delete user", user_path(@user), method: :delete,
+            data: { turbo_confirm: 'Are you sure?' },
+        class: "margin-15 p-button color-bright bg-color-dark"%>
+        </div>
 
-    <%= link_to "Edit", edit_user_path(@user) %>
-    <%= button_to "Destroy", user_path(@user), method: :delete,
-    form: { data: { turbo_confirm: 'Are you sure?' } }%>
-
+    </div>
+</div>
