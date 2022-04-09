@@ -7,13 +7,12 @@
   <div id="users">
     <% @users.each do |user| %>
 
-      <div class="margin-15">
-      <%= user.name %>
-        <%= link_to "detail", user %>
+      <div class="margin-lr margin-30 curved-borders-con">
+      <h2><%= user.name %></h2>
+        <%= link_to "details", user %> <p>
+          <h3>last posts:</h3>
+          <%= render user.articles.last(2) %>
       </div>
 
     <% end %>
   </div>
-
-  <%= link_to "New user", new_user_path %>
-</div>
