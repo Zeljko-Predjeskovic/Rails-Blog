@@ -1,24 +1,33 @@
-<h1>Articles</h1>
+<div class="flex-column text-pos-center">
+	<h1>Articles</h1>
 
+	<div class="text-pos-center">
+		<p>Our blog has <%= Article.public_count %> articles and counting!</p>
+	</div>
 
-Our blog has <%= Article.public_count %> articles and counting!
-
-<ul>
-	<% @articles.each do |article| %>
-	<% if current_user %>
-		<% unless article.archived? %>
-		<li>
-			<%= link_to article.title, user_article_path(article.user_id, article) %>
-		</li>
+		<% @articles.each do |article| %>
+		<% if current_user %>
+			<% unless article.archived? %>
+			<div class="margin-lr margin-30 curved-borders-con">
+				<div class="margin-5">
+					<%= link_to article.title, user_article_path(article.user_id, article) %>
+				</div>
+				<div class="margin-15">
+					<%= article.body[0,60] + "..."%>
+				</div>
+			</div>
+			<% end %>
+		<% else %>
+			<div>
+				<%= article.title %>
+			</div>	
 		<% end %>
-	<% else %>
-		<li>
-			<%= article.title%>
-		</li>	
-	<% end %>
-	<% end %>
-</ul>
+		<% end %>
 
-<% if current_user %>
-	<%= link_to "create" , new_user_article_path(current_user) %>
-<% end %>
+
+	<div class="margin-15">
+		<% if current_user %>
+			<%= link_to "create" , new_user_article_path(current_user) , class: "p-button color-bright bg-color-dark"%>
+		<% end %>
+	</div>
+</div>

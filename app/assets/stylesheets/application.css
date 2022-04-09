@@ -271,6 +271,10 @@ body {
   margin: 30px;
 }
 
+.margin-lr{
+  margin-left: 20%;
+  margin-right: 20%;
+}
 
 .margin-expTop-80 {
   margin-top: -40px;
@@ -317,6 +321,12 @@ body {
   border: solid;
   border-radius: 5px;
   border-color: transparent;
+}
+
+.curved-borders-con {
+  border: solid;
+  border-radius: 5px;
+  border-color: var(--yellow);
 }
 
 .curved-borders-shadows {
