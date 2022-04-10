@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 		@user = User.find_by(name: params[:name])
 
 		if !!@user && @user.authenticate(params[:password])
-			cookies[:user_id] = @user.id
+			cookies.encrypted.permanent[:user_id] = @user.id
 			redirect_to articles_showAll_path
 		else	
 			message = "Something went wrong!"

@@ -37,7 +37,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
 
     if @article.update(article_params)
-      redirect_to @article
+      redirect_to user_path(current_user)
     else
       render :edit, status: :unprocessable_entity
     end
@@ -47,7 +47,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @article.destroy
 
-    redirect_to articles_showAll_path, status: :see_other
+    redirect_to user_path(current_user), status: :see_other
   end
 
   private

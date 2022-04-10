@@ -17,4 +17,8 @@
 
     <h2>Comments</h2>
     <%= render @article.comments %>
-</div>
+
+<% if !!current_user %>
+    <h2>Create comment</h2>
+    <%= render "/comments/form" %>
+<%end%>

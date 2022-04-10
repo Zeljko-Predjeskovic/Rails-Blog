@@ -1,3 +1,6 @@
+
+
+
 <% unless comment.archived? %>
 	<p>
 	  <strong>Commenter:</strong>
@@ -10,9 +13,8 @@
 	</p>
 <% end %>
 
-<p>
-  <%= button_to "Delete Comment", [comment.article, comment], 
-  method: :delete, form: { data: {
-                turbo_confirm: "Are you sure?"
-              } } %>
-</p>
+
+<% if !!current_user && current_user.name == comment.commenter %>
+  <%= button_to "Delete Comment", user_article_comment_path(@article.user_id, @article.id, comment.id), 
+  method: :delete, data: { confirm: "Really?" }, class: "p-button" %>
+  <% end %>

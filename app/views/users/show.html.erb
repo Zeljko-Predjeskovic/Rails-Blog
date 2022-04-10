@@ -10,6 +10,11 @@
 
 
     <% if !!current_user && current_user.id == @user.id %>
+    <div class="margin-15">
+        <% if current_user %>
+            <%= link_to "create article" , new_user_article_path(current_user) , class: "p-button color-bright bg-color-dark"%>
+        <% end %>
+    </div>    
         <div class="margin-15">
             <%= link_to "edit user", edit_user_path(@user), class: " p-button color-bright bg-color-dark" %>
         </div>

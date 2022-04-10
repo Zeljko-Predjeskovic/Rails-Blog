@@ -14,8 +14,8 @@
 <% if current_user %>
   <nav class="navbar gap-10 bg-color-dark">
     <div class="navItem">
-      <%= link_to "Profile", user_path(current_user), 
-      class: "a-text color-bright" %>
+      <%= image_tag "logIcon.png", alt:"icon", style: "width:15px" %>
+      <%= link_to current_user.name, user_path(current_user) ,class: "a-text color-bright" %>
     </div>
     <div class="navItem">
       <%= link_to "Articles", 
@@ -42,7 +42,7 @@
     </div>    
     <div class="navItem">
       <%= link_to "Articles", 
-      articles_showAll_path, method: :post, data: { turbo_confirm: 'Are you sure you want to logout?' },
+      articles_showAll_path,
       class: "a-text color-bright" %>
     </div>
     <div class="navItem">
