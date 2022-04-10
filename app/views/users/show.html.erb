@@ -19,8 +19,8 @@
             <%= link_to "edit user", edit_user_path(@user), class: " p-button color-bright bg-color-dark" %>
         </div>
         <div class="margin-15">
-            <%= link_to "delete user", user_path(@user), method: :delete,
-            data: { turbo_confirm: 'Are you sure?' },
+            <%= button_to "delete user", user_path(@user), method: :delete,
+            form: { data: { turbo_confirm: 'Are you sure?' } },
         class: "margin-15 p-button color-bright bg-color-dark"%>
         </div>
     <% end %>
