@@ -12,10 +12,10 @@
 
   <body>
 
-<% if current_user %>
+<% if !!current_user %>
   <nav class="navbar gap-10 bg-color-dark">
     <div class="navItem">
-      <%= image_tag "logIcon.png", alt:"icon", style: "width:15px" %>
+      <%= image_tag "logIcon.png", alt:"icon", style: "width:12px; margin-top: -2px" %>
       <%= link_to current_user.name, user_path(current_user) ,class: "a-text color-bright" %>
     </div>
     <div class="navItem">

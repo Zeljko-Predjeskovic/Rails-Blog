@@ -26,6 +26,13 @@ body {
   font-family: sans-serif;
 }
 
+@media (max-width: 450px) {
+  body {
+    max-width: 450px;
+    font-size: 9pt;
+  }
+}
+
 .font-fam-serif {
   font-family: sans-serif;
 }
@@ -125,7 +132,11 @@ body {
 }
 
 .navItem {
-  margin: 10px;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
   padding: 10px;
 }
 
@@ -146,6 +157,7 @@ body {
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
+    fon
   }
 }
 

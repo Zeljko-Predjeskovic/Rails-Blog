@@ -25,7 +25,7 @@ class UsersController < ApplicationController
 
       if @user.save
         cookies.encrypted.permanent[:user_id] = @user.id
-        redirect_to user_path(@user.id), notice: "Your account was successfully created. Enjoy your time on our website!"
+        redirect_to user_path(@user), notice: "Your account was successfully created. Enjoy your time on our website!"
       else
         render :new, status: :unprocessable_entity
       end
