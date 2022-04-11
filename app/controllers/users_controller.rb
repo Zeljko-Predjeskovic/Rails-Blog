@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1 or /users/1.json
   def update
       if @user.update(user_params)
-        redirect_to users_url(@user), notice: "User was successfully updated."
+        redirect_to users_url(@user), notice: "User was successfully deleted."
       else
         render :edit, status: :unprocessable_entity
       end
