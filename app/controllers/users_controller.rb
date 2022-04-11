@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: %i[ show edit update destroy ]
+  before_action :set_user, only: %i[ show edit update destroy]
 
   # GET /users or /users.json
   def index
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1 or /users/1.json
   def update
       if @user.update(user_params)
-        redirect_to user_url(@user), notice: "User was successfully updated."
+        redirect_to users_url(@user), notice: "User was successfully updated."
       else
         render :edit, status: :unprocessable_entity
       end
@@ -45,7 +45,7 @@ class UsersController < ApplicationController
     @user.destroy
     cookies.delete :user_id
 
-    redirect_to articles_showAll_path, notice: "User was successfully destroyed."
+    redirect_to articles_showAll_path, status: :see_other, notice: "User was successfully destroyed."
   end
 
   private

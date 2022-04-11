@@ -1,16 +1,16 @@
 	<h2>Log In</h2>
 	<%= form_tag "/login" do %>
-	<div class="margin-15">
-		<label>Username:</label> 
+	<div >
+		<label>Username</label> 
 	</div>	
-	<div class="margin-15">	
+	<div>	
 		<%= text_field_tag :name %>
 	</div>	
-	<div class="margin-15">
-		<label>Password: </label> 
+	<div style="margin-top: 15px;">
+		<label>Password</label> 
 	</div>	
-	<div class="margin-15">
+	<div>
 		<%= password_field_tag :password %>
 	</div>	
-		<%= submit_tag "Log in" %>
+		<%= submit_tag "Log in", class: "p-button bg-color-dark color-bright margin-15" %>
 	<% end %>

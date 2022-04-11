@@ -1,6 +1,6 @@
 <%= form_with model: @user do |form| %>
 	<div>
-		<%= form.label :name %><br>
+		<%= form.label "Username" %><br>
 		<%= form.text_field :name %>
 		<% @user.errors.full_messages_for(:name).each do |message| %>
 			<div><%= message %></div>
@@ -17,7 +17,7 @@
 
 	</div>
 
-	<div class="margin-15">
-		<%= form.submit %>
+	<div class="margin-15 font-11">
+		<%= form.submit "create", class: "p-button bg-color-dark color-bright"%>
 	</div>
 <% end %>
