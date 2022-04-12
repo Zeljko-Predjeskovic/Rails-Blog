@@ -23,3 +23,10 @@
 		<%= form.submit "update" ,class: "margin-15 p-button color-bright bg-color-dark" %>
 	</div>
 <% end %>
+                <div class="margin-15">
+                    <%= link_to "delete user", user_path(@user),
+                    data: 
+                    { turbo_method: :delete,
+                        turbo_confirm: 'Are you sure?' },
+                class: "margin-15 p-button color-bright bg-color-dark"%>
+                </div>

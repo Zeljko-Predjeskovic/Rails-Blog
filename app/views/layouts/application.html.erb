@@ -13,30 +13,30 @@
   <body>
 
 <% if !!current_user %>
-  <nav class="navbar gap-10 bg-color-dark content-left">
-      <div class="navItem">
-        <%= image_tag "logIcon.png", alt:"icon", style: "width:12px; margin-top: -2px" %>
-        <%= link_to current_user.name, user_path(current_user) ,class: "a-text color-bright" %>
-      </div>
-      <div class="navItem">
-        <%= link_to "Articles", 
-        articles_showAll_path, 
-        class: "a-text color-bright" %>
-      </div>
-      <div class="navItem">
-        <%= link_to "Users", 
-        users_path, 
-        class: "a-text color-bright" %>
-      </div>    
-      <div class="navItem">
-        <%= link_to "Logout", 
-        logout_path, 
-        class: "a-text color-bright" %>
-      </div>  
+  <nav class="navbar gap-10 bg-color-dark content-center">
+    <div class="navItem">
+      <%= image_tag "logIcon.png", alt:"icon", style: "width:12px; margin-top: -2px" %>
+      <%= link_to current_user.name, user_path(current_user) ,class: "a-text color-bright" %>
+    </div>
+    <div class="navItem">
+      <%= link_to "Articles", 
+      articles_showAll_path, 
+      class: "a-text color-bright" %>
+    </div>
+    <div class="navItem">
+      <%= link_to "Users", 
+      users_path, 
+      class: "a-text color-bright" %>
+    </div>    
+    <div class="navItem">
+      <%= link_to "Logout", 
+      logout_path, 
+      class: "a-text color-bright" %>
+    </div>    
   </nav>
 
 <% else %>
-  <nav class="navbar gap-10 bg-color-dark">
+  <nav class="navbar gap-10 bg-color-dark content-center">
     <div class="navItem">
       <%= link_to "Home", home_path, 
       class: "a-text color-bright" %>

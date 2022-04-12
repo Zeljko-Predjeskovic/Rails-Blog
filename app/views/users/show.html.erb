@@ -4,27 +4,21 @@
         <div class="flex-column content-space-between">
         <h1><%= @user.name %></h1>
 
+            <% if !!current_user && current_user.id == @user.id %>
+            <div class="margin-15">
+                <% if current_user %>
+                    <%= link_to "create article" , new_user_article_path(current_user) , class: "p-button color-bright bg-color-dark"%>
+                <% end %>
+            </div>    
+                <div class="margin-15">
+                    <%= link_to "edit user", edit_user_path(@user), class: " p-button color-bright bg-color-dark" %>
+                </div>
+            <% end %>
+
 
         <h2>Articles</h2>
         <%= render @user.articles%>
 
 
-    <% if !!current_user && current_user.id == @user.id %>
-    <div class="margin-15">
-        <% if current_user %>
-            <%= link_to "create article" , new_user_article_path(current_user) , class: "p-button color-bright bg-color-dark"%>
-        <% end %>
-    </div>    
-        <div class="margin-15">
-            <%= link_to "edit user", edit_user_path(@user), class: " p-button color-bright bg-color-dark" %>
-        </div>
-        <div class="margin-15">
-            <%= link_to "delete", user_path(@user),
-            data: 
-            { turbo_method: :delete,
-                turbo_confirm: 'Are you sure?' },
-        class: "margin-15 p-button color-bright bg-color-dark"%>
-        </div>
-    <% end %>
     </div>
 </div>
